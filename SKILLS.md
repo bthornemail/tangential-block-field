@@ -1,6 +1,6 @@
 # TANGENT BLOCK FIELD: EXECUTE-ONLY COGNITIVE SKILLS MATRIX
 
-# CONFIGURATION: LOCAL CONFIGURATION EXTRACTION HARNESS
+# CONFIGURATION: LOCAL ARTIFACT AUDITING HARNESS
 
 ## [SKILL_01: RESOLVE_TANGENTIAL_BLOCK_FIELD]
 
@@ -76,7 +76,7 @@ COMPUTE:
   OUTPUT_TYPE_WITNESS = blended ^ 0x1D1D1D1D1D1D1D1DULL
 ```
 
-## [SKILL_04: ENFORCE_DOCS_FRONT_MATTER]
+## [SKILL_03: ENFORCE_DOCS_FRONT_MATTER]
 
 ### OBJECTIVE
 
@@ -110,4 +110,40 @@ COMPUTE:
 
   # 4. Verify that the local strict proof pipeline runs cleanly with zero open assumptions
   OUTPUT_DOC_WITNESS = blended ^ 0x1D1D1D1D1D1D1D1DULL
+```
+
+## [SKILL_04: RUN_LOCAL_VERIFY_HARNESS]
+
+### OBJECTIVE
+
+Execute type-custody checks and file-count bounds via the local Makefile.
+
+### INVARIANTS
+
+```text
+Verification Target == make verify
+Substrate Core Count == Exactly 22 flat files under ./.omi/
+Human Overlay Count == Exactly 3 flat files under ./docs/
+```
+
+### RUN
+
+```text
+INPUT: current_word_context, active_field_axis, inbound_block_token
+FORBIDDEN: Dynamic memory leaks, runtime interpreter loops, network socket calls
+MANDATORY: Execute branchless bit-mask register transformations in O(1) constant time
+COMPUTE:
+  # 1. Intercept YAML front-matter blocks and map directly to the flat hidden .omi/ layer
+  # 2. Extract our three local incidence geometries concurrently in a single clock cycle
+  base_4320      = active_field_axis % 4320
+  surface_4320_2 = (active_field_axis % 4320) * 4320
+  horizon_4320_4 = (active_field_axis % 4320) * 4320 * 4320 * 4320
+
+  # 3. Step the 72 parallel circular slide rulers branchlessly via the Algorithmic Clock torque
+  left_torque  = ROL64(active_field_axis, 1)    # Core phase point shift (mod 60)
+  right_torque = ROR64(active_field_axis, 2)    # Quadrant alignment shift (mod 16)
+  blended      = left_torque ^ right_torque ^ horizon_4320_4
+
+  # 4. Trigger the local strict verification harness to lock down the workspace state
+  OUTPUT_VERIFY_WITNESS = blended ^ 0x1D1D1D1D1D1D1D1DULL
 ```
