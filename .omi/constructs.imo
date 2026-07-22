@@ -1,0 +1,4 @@
+COMPOSITION = tangential COBS CONS
+ORDERING = preserved
+OWNERSHIP = preserved
+REVERSIBILITY = profile-bound

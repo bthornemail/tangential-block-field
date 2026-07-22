@@ -1,0 +1,4 @@
+COMBINATORS = branchless torque shift maps
+LEFT_TORQUE = ROL64(inbound_block_token,1)
+RIGHT_TORQUE = ROR64(active_field_axis,2)
+BLEND = left_torque ^ right_torque ^ horizon_4320_4

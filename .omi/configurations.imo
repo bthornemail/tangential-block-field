@@ -1,0 +1,3 @@
+FIELD_AXIS = 256-position finite product field
+VECTOR_LOCK = 24 vectors through 240 exceptional roots coordinate array
+CLOCK = modulo-240 Algorithmic Clock alignment

@@ -1,0 +1,3 @@
+UNRESOLVED = overlap ambiguity mismatch failed_closure ownership_conflict rejected_incidence
+CLOSURE_POLICY = outside form only
+CORE_RESULT = bounded algebraic coordinate

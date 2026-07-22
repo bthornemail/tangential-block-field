@@ -1,0 +1,5 @@
+OMINO = shared projection reference
+BLACKBOARD_FIELD = bounded projective field
+LOCAL_SELECTOR = 0x00..0x7F
+REMOTE_SELECTOR = 0x80..0xFF
+ANTIPODE = x ^ 0x80

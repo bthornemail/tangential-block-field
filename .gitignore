@@ -1,0 +1,3 @@
+# Tangential-Block-Field Ignore Invariants
+*.o
+!.omi/*.o

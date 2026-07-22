@@ -1,0 +1,3 @@
+CLAUSES = blackboard context block carrier declarations
+GEOMETRIC_STRATUM = ±7 CLAUSES
+CONTRIBUTION_OBJECT = Blackboard Context Block

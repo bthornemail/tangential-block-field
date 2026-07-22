@@ -1,0 +1,5 @@
+OMINO_CENTROID_POINT = 0x00
+OMINO_CENTROID_AZIMUTH = 0 degrees
+FIELD = Tangential Block Field
+SURFACE = Blackboard Field
+DECLARATION = pure geometric visibility declarations

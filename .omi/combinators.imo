@@ -1,0 +1,3 @@
+TANGENT_CONS = relation resolver and boundary
+DISJOINT_PROFILE = A & B == 0 -> A | B
+METATRON_RAIL = 0x1D1D1D1D1D1D1D1D
