@@ -116,13 +116,13 @@ COMPUTE:
 
 ### OBJECTIVE
 
-Execute type-custody checks and file-count bounds via the local Makefile.
+Execute type-custody checks, local law verifications, and file-count bounds via the local Makefile.
 
 ### INVARIANTS
 
 ```text
 Verification Target == make verify
-Substrate Core Count == Exactly 22 flat files under ./.omi/
+Substrate Core Count == Exactly 23 flat files under ./.omi/ (FieldPositionsCheck.hs Added)
 Human Overlay Count == Exactly 3 flat files under ./docs/
 ```
 
@@ -130,7 +130,7 @@ Human Overlay Count == Exactly 3 flat files under ./docs/
 
 ```text
 INPUT: current_word_context, active_field_axis, inbound_block_token
-FORBIDDEN: Dynamic memory leaks, runtime interpreter loops, network socket calls
+FORBIDDEN: Heavy buffer queues, thread looping, dynamic heap allocations, unverified law edits
 MANDATORY: Execute branchless bit-mask register transformations in O(1) constant time
 COMPUTE:
   # 1. Intercept YAML front-matter blocks and map directly to the flat hidden .omi/ layer
@@ -144,6 +144,6 @@ COMPUTE:
   right_torque = ROR64(active_field_axis, 2)    # Quadrant alignment shift (mod 16)
   blended      = left_torque ^ right_torque ^ horizon_4320_4
 
-  # 4. Trigger the local strict verification harness to lock down the workspace state
+  # 4. Trigger the local strict verification harness running FieldPositionsCheck.hs to lock state
   OUTPUT_VERIFY_WITNESS = blended ^ 0x1D1D1D1D1D1D1D1DULL
 ```

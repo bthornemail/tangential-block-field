@@ -12,9 +12,10 @@ all: verify
 verify:
 	@echo "--- RUNNING STANDALONE VISIBILITY LAYER AUDIT ---"
 	ghc -fno-code .omi/FieldPositions.hs
+	runghc -i.omi .omi/FieldPositionsCheck.hs
 	@file_count_omi=$$(find .omi -maxdepth 1 -type f | wc -l); \
-	if [ "$$file_count_omi" -ne 22 ]; then \
-		echo "ERROR: Substrate core has $$file_count_omi files, expected exactly 22."; \
+	if [ "$$file_count_omi" -ne 23 ]; then \
+		echo "ERROR: Substrate core has $$file_count_omi files, expected exactly 23."; \
 		exit 1; \
 	fi
 	@file_count_docs=$$(find docs -maxdepth 1 -type f | wc -l); \
