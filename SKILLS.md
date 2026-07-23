@@ -116,24 +116,24 @@ COMPUTE:
 
 ### OBJECTIVE
 
-Execute type-custody checks, local law verifications, and file-count bounds via the local Makefile.
+Execute type-custody checks, local law verifications, and C99 bare-metal syntax bounds via the local Makefile.
 
 ### INVARIANTS
 
 ```text
 Verification Target == make verify
-Substrate Core Count == Exactly 23 flat files under ./.omi/ (FieldPositionsCheck.hs Added)
-Human Overlay Count == Exactly 3 flat files under ./docs/
+Substrate Core Count == Exactly 25 flat files under ./.omi/ (C99 Interface and Check Added)
+Compiler Check Flag == -std=c99 -Wall -Wextra -pedantic -fsyntax-only
 ```
 
 ### RUN
 
 ```text
 INPUT: current_word_context, active_field_axis, inbound_block_token
-FORBIDDEN: Heavy buffer queues, thread looping, dynamic heap allocations, unverified law edits
+FORBIDDEN: Heavy buffer queues, thread looping, dynamic heap allocations, unverified C99 drift
 MANDATORY: Execute branchless bit-mask register transformations in O(1) constant time
 COMPUTE:
-  # 1. Intercept YAML front-matter blocks and map directly to the flat hidden .omi/ layer
+  # 1. Audit the flat files to ensure absolute zero internal folder nesting exists under .omi/
   # 2. Extract our three local incidence geometries concurrently in a single clock cycle
   base_4320      = active_field_axis % 4320
   surface_4320_2 = (active_field_axis % 4320) * 4320
@@ -144,6 +144,6 @@ COMPUTE:
   right_torque = ROR64(active_field_axis, 2)    # Quadrant alignment shift (mod 16)
   blended      = left_torque ^ right_torque ^ horizon_4320_4
 
-  # 4. Trigger the local strict verification harness running FieldPositionsCheck.hs to lock state
+  # 4. Trigger the local strict verification harness running C99 checks to lock state
   OUTPUT_VERIFY_WITNESS = blended ^ 0x1D1D1D1D1D1D1D1DULL
 ```
